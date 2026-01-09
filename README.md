@@ -11,10 +11,25 @@ cd trenscendence-frontend
 npm run dev
 
 
-!you can test using curl or the front-end!
+# you can test using curl:
+
+1. Register
+curl -X POST http://localhost:3000/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{"username":"cleantest","email":"clean@test.com","password":"password123"}'
+
+2. Login
+curl -X POST http://localhost:3000/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"username":"cleantest","password":"password123"}'
+
+3. Protected route (use token from login response)
+curl http://localhost:3000/auth/me \
+  -H "Authorization: Bearer Token_Here"
+
+# Or test with the front-end!
 
 # Project Features
-
 What is Built so far:
 
 Backend (NestJS + PostgreSQL + Prisma)
