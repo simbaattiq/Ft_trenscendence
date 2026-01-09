@@ -1,10 +1,15 @@
 # To launch the backend:  
-cd trenscendence-backend\n
+
+cd trenscendence-backend
+
 npm run start:dev
 
 # To launch the frontend:
+
 cd trenscendence-frontend
+
 npm run dev
+
 
 !you can test using curl or the front-end!
 
